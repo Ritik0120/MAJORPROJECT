@@ -126,3 +126,9 @@ body {
   height: 400px;
   width: 80vh;
 }
+
+@media(min-width){
+  #filters{
+    display: block;
+  }
+}
