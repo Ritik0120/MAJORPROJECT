@@ -6,12 +6,13 @@
       flex-wrap: wrap;
       align-items: center;
     }
-    
+
     .filter {
       text-align: center;
       margin-right: 2rem;
       margin-top: 2rem;
       opacity: 0.7;
+      padding: 0.2rem;
     }
     .filter:hover {
       opacity: 1;
@@ -20,10 +21,10 @@
     .filter p {
       font-size: 0.8rem;
     }
-    .tax-info{
+    .tax-info {
       display: none;
     }
-    .tax-toggle{
+    .tax-toggle {
       border: 1px solid black;
       border-radius: 1rem;
       height: 3.25rem;
@@ -34,7 +35,7 @@
     }
   </style>
 
-  <div id="filters">
+  <div id="filters sticky-top">
     <div class="filter">
       <div><i class="fa-solid fa-fire"></i></div>
       <p>Trending</p>
@@ -80,7 +81,7 @@
       <p>Boats</p>
     </div>
 
-    <div class="tax-toggle">
+    <div class="tax-toggle ">
       <div class="form-check-reverse form-switch">
         <input
           class="form-check-input"
@@ -123,10 +124,10 @@
     let taxSwitch = document.getElementById("flexSwitchCheckDefault");
     taxSwitch.addEventListener("click", () => {
       let taxInfo = document.getElementsByClassName("tax-info");
-      for(info of taxInfo){
-        if(info.style.display != "inline") {
+      for (info of taxInfo) {
+        if (info.style.display != "inline") {
           info.style.display = "inline";
-        }else{
+        } else {
           info.style.display = "none";
         }
       }
