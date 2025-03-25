@@ -126,18 +126,42 @@ body {
   height: 400px;
   width: 80vh;
 }
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Base styles for mobile */
+body {
+  font-size: 16px;
 }
-@media (max-width: 768px) {
-  .listing {
-      width: 100%;
-      margin: 10px 0;
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  body {
+      font-size: 18px;
   }
 }
+
+/* Styles for desktops */
+@media (min-width: 1024px) {
+  body {
+      font-size: 20px;
+  }
+}
+
+.container {
+  width: 90%; /* Instead of a fixed width */
+  margin: 0 auto; /* Center the container */
+}
+
+.listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.listing-item {
+  flex: 1 1 300px; /* Grow, shrink, and set a base width */
+  margin: 10px;
+}
+
 img {
   max-width: 100%;
-  height: auto;
+  height: auto; /* Maintain aspect ratio */
 }
