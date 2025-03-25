@@ -127,7 +127,7 @@ body {
   width: 80vh;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -141,4 +141,4 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
+} */
